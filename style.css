@@ -1,0 +1,303 @@
+/* NAVBAR STYLING */
+.navbar {
+  display: flex;                /* puts all links in one row (horizontal) */
+  justify-content: center;      /* centers them across the page */
+  gap: 30px;                    /* adds space between each link */
+  background-color: #f2f2f2;    /* gives navbar a light gray background */
+  padding: 15px 0;              /* adds top & bottom padding */
+  font-family: sans-serif;      /*puts text in sans-serif font*/
+}
+
+/* individual links inside navbar */
+.navbar a {
+  text-decoration: none;        /* removes the underline */
+  color: #333;                  /* sets link color to dark gray */
+  font-weight: bold;            /* makes text thicker */
+  font-size: 1.1rem;            /* adjusts font size */
+}
+
+/* hover = when your mouse goes over a link */
+.navbar a:hover {
+  color: #0077cc;               /* changes color to blue when hovered */
+  /* you could also add shadow here if you want that 3D feel, like:
+     text-shadow: 0 2px 5px rgba(0,0,0,0.2); */
+}
+
+/* INTRO SECTION */
+.intro {
+  font-size: 20px;              /* increases text size */
+  text-align: center;           /* centers the intro paragraph */
+}
+
+/* HERO SECTION (big top banner)*/
+.hero {
+  background: url("dream.png") no-repeat center center/cover;
+  width: 100%;
+  min-height: 100vh;               /* full viewport height, scrollable if content is longer */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  padding: 40px 20px;              /* spacing if content is taller than viewport */
+}
+
+.hero .overlay {
+  background: rgba(255,255,255,0.3);
+  backdrop-filter: blur(8px);
+  padding: 40px 60px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  color: #222;
+  max-width: 700px;
+}
+
+
+.hero .overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.hero .overlay h3 {
+  font-size: 1.5rem;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.hero .overlay .button {
+  display: inline-block;
+  text-decoration: none;
+  background-color:#005fa3;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 10px;
+  font-weight: bold;
+  margin-top: 20px;
+  transition: background 0.3s;
+}
+
+.hero .overlay .button:hover {
+  background-color: cadetblue;
+}
+
+
+/* STORY CARDS */
+.card {
+  background: white;             /* white card background */
+  border-radius: 15px;           /* soft curved corners */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* ✨ subtle shadow = 3D effect */
+  padding: 15px;                 /* space inside the card */
+  width: 300px;                  /* card width */
+  margin: 20px;                  /* space between cards */
+  text-align: center;            /* centers text */
+  overflow: hidden;              /* hides anything going outside rounded corners */
+   background-color: rgba(255,255,255,0.9);  /* semi-transparent white box */
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  position: relative;       /* ensures it sits above the background */
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.card:hover{
+transform: translateY(-5px) scale(1.02);
+box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* images inside cards */
+.card img {
+  width: 100%;                   /* makes image fit full width */
+  border-radius: 10px;           /* slightly rounds the image corners */
+}
+
+/* container that holds all the story cards */
+.cards-container {
+  display: flex;                 /* puts cards in a row */
+  flex-wrap: wrap;               /* moves cards to next line if screen too small */
+  justify-content: center;       /* centers all cards */
+  gap: 20px;                     /* space between each card */
+}
+
+/* page title styling */
+.page-title {
+  text-align: center;            /* centers the title */
+  margin: 30px 0;                /* adds vertical spacing */
+}
+
+/*BUTTON STYLING*/
+.button {
+  display: inline-block;          /* makes it act like a button */
+  text-decoration: none;          /* removes underline */
+  background-color: #005fa3;      /* blue background */
+  color: white;                   /* white text */
+  padding: 10px 20px;             /* inner spacing */
+  border-radius: 10px;            /* rounded corners */
+  font-weight: bold;              /* bold text */
+  transition: background 0.3s;    /* smooth color change when hovered */
+}
+
+/* hover effect for button */
+.button:hover {
+  background-color: cadetblue;
+  transform: scale(0.97);    
+ }
+
+
+.story-page {
+  background-size: cover;
+  background-position: center;
+  height: 100vh;           /* full screen or adjust as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.story-overlay {
+  width: 80%;
+  max-width: 800px;
+  padding: 40px;
+  backdrop-filter: blur(8px);    /* creates the blurred background effect */
+  background-color: rgba(255,255,255,0.3); /* semi-transparent white overlay */
+  border-radius: 15px;           /* curves all edges */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* soft shadow */
+  font-family: sans-serif;      /*puts text in sans-serif font*/
+}
+
+.story-title h1 {
+  background-color: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: sans-serif;      /*puts text in sans-serif font*/
+}
+
+.story-text {
+  background-color: white; /* white box for text */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  line-height: 1.6;
+  font-size: 1.1rem;
+  font-family: sans-serif;      /*puts text in sans-serif font*/
+}
+
+.end {
+  background-color: #f2f2f2;  /* peach color */
+  text-align: center;          /* center text horizontally */
+  padding: 10px 0;             /* some vertical padding */
+  margin-top: 40px;            /* space above footer */
+  font-size: 0.9rem;           /* optional smaller text */
+  font-family: sans-serif;      /*puts text in sans-serif font*/
+  font-weight: bold;
+}
+
+.about-page {
+  width: 80%;
+  max-width: 900px;
+  margin: 50px auto;          /* centers content */
+}
+
+.project h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+/* About Project Page CSS */
+
+/* Background section */
+.the-page {
+  background-image: url('images/whalebg.png');
+  background-size: cover;
+  background-position: center;
+  padding: 60px 0;             /* space top & bottom */
+}
+
+/* Main container with blur overlay */
+.about-page {
+  width: 80%;
+  max-width: 800px;
+  padding: 40px;
+  margin: 0 auto;               /* centers horizontally */
+  backdrop-filter: blur(8px);   /* soft blur effect */
+  background-color: rgba(255,255,255,0.3); /* translucent white */
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);  /* subtle shadow */
+}
+
+/* Page title */
+.project h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+/* Individual content boxes */
+.details, .understand {
+  background-color: rgba(255,255,255,0.9);  /* solid-ish white box */
+  padding: 25px 30px;
+  border-radius: 15px;                      /* curved edges */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  line-height: 1.6;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+/* Box titles */
+.details h3, .understand h3 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #222;
+}
+
+/* Box paragraphs */
+.details p, .understand p {
+  line-height: 1.6;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/*Hover effect*/
+.details:hover, .understand:hover {
+  transform: translateY(-3px);
+  transition: 0.3s;
+}
+
+.proverb {
+  background-color: rgba(255, 255, 255, 0.8); /* translucent white so text is readable */
+  backdrop-filter: blur(5px);                 /* optional soft blur behind it */
+  max-width: 700px;                           /* keeps it neat */
+  margin: 50px auto;                          /* center horizontally with spacing top & bottom */
+  padding: 30px 40px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.proverb p {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+body {
+font-family: calibri;
+}
+
+.story-bg{
+  background: url("your-background.png") no-repeat center center/cover;
+  position: fixed;          /* stays in place while scrolling */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;              /* sends it behind everything */
+  filter: blur(8px);        /* blurry effect */
+  opacity: 0.6;        /* optional, makes it subtle */
+}
