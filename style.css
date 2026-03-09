@@ -1,0 +1,486 @@
+/* NAVBAR STYLING */
+.navbar {
+z-index: 1000;
+width: 100%;
+display: flex; /* Specifies a flex container */
+justify-content: center; /* Centers items horizontally */
+gap: 30px; /* Sets space between items */
+background-color: #f2f2f2; /* Sets background color */
+padding: 15px 0; /* Sets vertical padding */
+font-family: sans-serif; /* Sets font */
+}
+/* individual links inside navbar */
+.navbar a {
+text-decoration: none; /* Removes underline */
+color: #333; /* Sets text color */
+font-weight: bold; /* Makes text thicker */
+font-size: 1.1rem; /* Sets font size */
+}
+/* hover = when your mouse goes over a link */
+.navbar a:hover {
+color: #0077cc; /* Changes color on hover */
+}
+/* INTRO SECTION */
+.intro {
+font-size: 20px; /* Increases text size */
+text-align: center; /* Centers text */
+}
+/*Translate in a stylish manner*/
+/* Container styling for smooth, soft look */
+.translate-wrapper {
+    display: inline-flex;                  /* Align label + dropdown nicely */
+    align-items: center;
+    gap: 8px;                              /* Space between label and dropdown */
+    background-color: #f7f7f7;             /* Soft background */
+    padding: 6px 12px;                     /* Comfortable padding */
+    border-radius: 10px;                   /* Rounded corners */
+    font-family: 'Playfair Display', serif;/* Match your headers */
+    font-size: 0.95em;                     /* Slightly smaller font */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* Soft shadow */
+    margin-bottom: 20px;                   /* Space below section */
+}
+/* Dropdown styling for smoother look */
+.translate-wrapper select {
+    background-color: #ffffff;             /* White dropdown */
+    border: 1px solid #ddd;                /* Soft border */
+    border-radius: 6px;                     /* Rounded edges */
+    padding: 4px 6px;                       /* Comfortable padding */
+    font-family: 'Playfair Display', serif;/* Same font */
+    cursor: pointer;                        /* Pointer on hover */
+}
+/* Hide Google Translate top banner */
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+}
+/* HERO SECTION (big top banner)*/
+.hero {
+background: url("dream.png") no-repeat center center/cover; /* Sets and sizes background image */
+width: 100%; /* Sets width */
+min-height: 100vh; /* Sets minimum height to full viewport height */
+display: flex; /* Specifies a flex container */
+align-items: center; /* Centers items vertically */
+justify-content: center; /* Centers items horizontally */
+text-align: center; /* Centers text */
+position: relative; /* Sets position context for children */
+padding: 40px 20px; /* Sets padding */
+}
+.hero .overlay {
+background: rgba(255, 255, 255, 0.3); /* Sets transparent background */
+backdrop-filter: blur(8px); /* Applies background blur effect */
+padding: 40px 60px; /* Sets padding */
+border-radius: 20px; /* Rounds corners */
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Applies shadow */
+color: #222; /* Sets text color */
+max-width: 700px; /* Sets maximum width */
+}
+.hero .overlay h1 {
+font-size: 3rem; /* Sets font size */
+margin-bottom: 15px; /* Sets bottom margin */
+}
+.hero .overlay h3 {
+font-size: 1.5rem; /* Sets font size */
+font-style: italic; /* Sets font style */
+line-height: 1.4; /* Sets line spacing */
+}
+.hero .overlay .button {
+display: inline-block; /* Makes element block-level but inline with text flow */
+text-decoration: none; /* Removes underline */
+background-color: #005fa3; /* Sets background color */
+color: white; /* Sets text color */
+padding: 12px 25px; /* Sets padding */
+border-radius: 10px; /* Rounds corners */
+font-weight: bold; /* Makes text thicker */
+margin-top: 20px; /* Sets top margin */
+transition: background 0.3s; /* Smooths color change */
+}
+.hero .overlay .button:hover {
+background-color: cadetblue; /* Changes background color on hover */
+}/* --- CRUCIAL: Set the reference container --- */
+.story-page {
+    /* Your existing styles (background-image, etc.) */
+    position: relative; /* This is essential for absolute positioning inside it */
+    padding-bottom: 100px; /* Ensure space at the bottom for the button to sit */
+}
+/* --- PREVIOUS STORY BUTTON POSITIONING AND STYLE --- */
+.prev-story {
+    /* Now positioned relative to the .story-page container (your background image) */
+    position: absolute; 
+    bottom: 20px;
+    left: 20px;
+    z-index: 10; 
+    text-align: left; /* Not strictly needed with absolute positioning, but good practic e */
+    /* Remove margin-top as absolute position ignores normal flow spacing */
+}
+.prev-story .button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: rgba(0, 128, 128, 0.9); /* Use higher opacity for better readability on the background image */
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+.prev-story .button:hover {
+    background-color: rgba(0, 102, 102, 1.0);
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+}
+/* --- NEXT STORY BUTTON POSITIONING AND STYLE --- */
+.next-story {
+    /* Now positioned relative to the .story-page container (your background image) */
+    position: absolute; 
+    bottom: 20px;
+    right: 20px;
+    z-index: 10; 
+    text-align: right; /* Not strictly needed with absolute positioning, but good practice */
+    /* Remove margin-top as absolute position ignores normal flow spacing */
+}
+
+.next-story .button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: rgba(0, 128, 128, 0.9); /* Use higher opacity for better readability on the background image */
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.next-story .button:hover {
+    background-color: rgba(0, 102, 102, 1.0);
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+}
+h2 {
+    text-align: center; /* Centers the header text */
+    font-size: 2em; /* Slightly large but still soft */
+    font-family: 'Playfair Display', serif; /* Elegant serif font */
+    font-weight: 500; /* Softer than bold (not heavy) */
+    letter-spacing: 0.8px; /* Soft spacing between letters */
+
+    margin: 40px 0 20px 0; /* Space above and below the header */
+    padding: 8px 0; /* Space inside the header, keeps it airy */
+
+    color: inherit; /* Lets the section color decide the text color */
+
+    background: rgba(255, 255, 255, 0.4); /* Soft transparent white background */
+    backdrop-filter: blur(5px); /* Creates the glass/blurred effect */
+    -webkit-backdrop-filter: blur(5px); /* Fix for Safari browsers */
+
+    border-radius: 12px; /* Smooth rounded corners to match your style */
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Very soft border */
+}
+
+/* Theme Colors For Each Section */
+.hope h2 {
+    color: #006b6b; /* Soft teal text */
+}
+
+.struggle h2 {
+    color: #8e1c1c; /* Softer red text */
+}
+
+.change h2 {
+    color: #3c3470; /* Muted deep purple */
+}
+
+.joy h2 {
+    color: #cc6f00; /* Warm soft orange */
+}
+.story-section {
+    position: relative;   /* So absolute elements inside stay within this section */
+}
+
+/* STORY CARDS */
+.card {
+background: white; /* Sets white background */
+border-radius: 15px; /* Rounds corners */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Applies shadow */
+padding: 15px; /* Sets padding */
+width: 300px; /* Sets width */
+margin: 20px; /* Sets margin */
+text-align: center; /* Centers text */
+overflow: hidden; /* Clips content outside element */
+background-color: rgba(255, 255, 255, 0.9); /* Sets semi-transparent background */
+border-radius: 15px; /* Rounds corners */
+padding: 20px; /* Sets padding */
+margin: 20px auto; /* Centers horizontally with vertical margin */
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Applies shadow */
+position: relative; /* Sets position context */
+z-index: 1; /* Sets stacking order */
+transition: all 0.3s ease; /* Smooths transitions */
+}
+.card:hover {
+transform: translateY(-5px) scale(1.02); /* Moves element up and scales slightly */
+box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); /* Changes shadow on hover */
+}
+/* images inside cards */
+.card img {
+width: 100%; /* Sets width to container width */
+border-radius: 10px; /* Rounds image corners */
+}
+/* container that holds all the story cards */
+.cards-container {
+display: flex; /* Specifies a flex container */
+flex-wrap: wrap; /* Allows items to wrap to next line */
+justify-content: center; /* Centers items horizontally */
+gap: 20px; /* Sets space between items */
+}
+/* page title styling */
+.page-title {
+text-align: center; /* Centers text */
+margin: 30px 0; /* Sets vertical margin */
+}
+/*BUTTON STYLING*/
+.button {
+display: inline-block; /* Makes element block-level but inline with text flow */
+text-decoration: none; /* Removes underline */
+background-color: #005fa3; /* Sets background color */
+color: white; /* Sets text color */
+padding: 10px 20px; /* Sets padding */
+border-radius: 10px; /* Rounds corners */
+font-weight: bold; /* Makes text thicker */
+transition: background 0.3s; /* Smooths color change */
+}
+/* hover effect for button */
+.button:hover {
+background-color: cadetblue; /* Changes background color on hover */
+transform: scale(0.97); /* Shrinks element slightly */
+}
+body {
+font-family: calibri;
+top:0px;
+margin: 0;
+padding: 0;
+overflow-x: hidden; /* This hides any content that pushes past the screen width */
+box-sizing: border-box;
+font-family: sans-serif; /* Keep your existing font */
+}
+/* Story Page Background */
+.story-page {
+/* BACKGROUND FIXES */
+background-size: cover; /* Ensures image covers the entire container */
+background-position: center center; /* Centers the image precisely */
+background-attachment: fixed; /* NEW: Keeps the background image fixed to the viewport, preventing zoom/stretch with scrolling content */
+min-height: 100vh; /* Ensures the background always fills the screen height */
+/* LAYOUT FIXES (To center the story box vertically and horizontally) */
+display: flex; /* Specifies a flex container */
+flex-direction: column; /* FIX: Stacks content vertically (story-overlay, heart, comments) */
+justify-content: flex-start; /* Aligns content to the top of the container */
+align-items: center; /* FIX: Centers the story-overlay box horizontally */
+padding: 50px 20px; /* Sets padding around the container */
+position: relative; /* Sets position context for z-index */
+}
+/* Overlay with blur and semi-transparent background */
+.story-overlay {
+width: 80%; /* Sets width */
+max-width: 800px; /* Sets maximum width */
+padding: 30px; /* Sets padding */
+backdrop-filter: blur(8px); /* Applies background blur effect */
+background-color: rgba(255, 255, 255, 0.3); /* Sets translucent background */
+border-radius: 15px; /* Rounds corners */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Applies shadow */
+font-family: sans-serif; /* Sets font */
+display: flex; /* Specifies a flex container */
+flex-direction: column; /* Stacks items vertically (title, text, comments) */
+}
+/* Heading */
+.story-title h1 {
+background-color: white; /* Sets white background */
+padding: 15px 20px; /* Sets padding */
+border-radius: 10px; /* Rounds corners */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Applies shadow */
+text-align: center; /* Centers text */
+margin-bottom: 20px; /* Sets bottom margin */
+font-family: sans-serif; /* Sets font */
+flex-shrink: 0; /* Prevents item from shrinking */
+}
+/* Story text area (CONSOLIDATED STYLES) */
+.story-text {
+max-height: calc(100vh - 200px); /* Sets maximum height based on viewport */
+overflow-y: auto; /* Adds vertical scrollbar if content exceeds max-height */
+padding: 20px; /* Sets padding */
+background-color: white; /* Sets white background */
+border-radius: 10px; /* Rounds corners */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Applies shadow */
+line-height: 1.6; /* Sets line spacing */
+font-size: 1.1rem; /* Sets font size */
+font-family: sans-serif; /* Sets font */
+}
+/* Optional: Scrollbar styling */
+.story-text::-webkit-scrollbar {
+width: 8px; /* Sets scrollbar width */
+}
+.story-text::-webkit-scrollbar-thumb {
+background-color: rgba(0, 0, 0, 0.2); /* Sets scrollbar thumb color */
+border-radius: 4px; /* Rounds scrollbar thumb corners */
+}
+.about-page {
+width: 80%; /* Sets width */
+max-width: 900px; /* Sets maximum width */
+margin: 50px auto; /* Centers horizontally with vertical margin */
+}
+.project h1 {
+text-align: center; /* Centers text */
+font-size: 2.5rem; /* Sets font size */
+margin-bottom: 40px; /* Sets bottom margin */
+}
+/* About Project Page CSS */
+/* Background section */
+.the-page {
+background-image: url('images/whalebg.png'); /* Sets background image */
+background-size: cover; /* Sizes background image to cover container */
+background-position: center; /* Centers background image */
+padding: 60px 0; /* Sets vertical padding */
+}
+/* Main container with blur overlay */
+.about-page {
+width: 80%; /* Sets width */
+max-width: 800px; /* Sets maximum width */
+padding: 40px; /* Sets padding */
+margin: 0 auto; /* Centers horizontally */
+backdrop-filter: blur(8px); /* Applies background blur effect */
+background-color: rgba(255, 255, 255, 0.3); /* Sets translucent background */
+border-radius: 15px; /* Rounds corners */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Applies shadow */
+}
+/* Page title */
+.project h1 {
+text-align: center; /* Centers text */
+font-size: 2.5rem; /* Sets font size */
+margin-bottom: 40px; /* Sets bottom margin */
+color: #333; /* Sets text color */
+}
+/* Individual content boxes */
+.details, .understand {
+background-color: rgba(255, 255, 255, 0.9); /* Sets near-solid white background */
+padding: 25px 30px; /* Sets padding */
+border-radius: 15px; /* Rounds corners */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Applies shadow */
+line-height: 1.6; /* Sets line spacing */
+font-size: 1.1rem; /* Sets font size */
+margin-bottom: 30px; /* Sets bottom margin */
+}
+/* Box titles */
+.details h3, .understand h3 {
+margin-bottom: 15px; /* Sets bottom margin */
+font-size: 1.5rem; /* Sets font size */
+color: #222; /* Sets text color */
+}
+/* Box paragraphs */
+.details p, .understand p {
+line-height: 1.6; /* Sets line spacing */
+font-size: 1.1rem; /* Sets font size */
+color: #333; /* Sets text color */
+}
+/*Hover effect*/
+.details:hover, .understand:hover {
+transform: translateY(-3px); /* Moves element up slightly */
+transition: 0.3s; /* Smooths transition */
+}
+.proverb {
+background-color: rgba(255, 255, 255, 0.8); /* Sets translucent background */
+backdrop-filter: blur(5px); /* Applies background blur effect */
+max-width: 700px; /* Sets maximum width */
+margin: 50px auto; /* Centers horizontally with vertical margin */
+padding: 30px 40px; /* Sets padding */
+border-radius: 15px; /* Rounds corners */
+text-align: center; /* Centers text */
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Applies shadow */
+}
+.proverb p {
+font-size: 1.3rem; /* Sets font size */
+line-height: 1.6; /* Sets line spacing */
+color: #333; /* Sets text color */
+}
+.story-bg {
+background: url("your-background.png") no-repeat center center/cover; /* Sets and sizes background image */
+position: fixed; /* Fixes element position relative to viewport */
+top: 0; /* Aligns to top */
+left: 0; /* Aligns to left */
+width: 100%; /* Sets width */
+height: 100%; /* Sets height */
+z-index: -1; /* Puts element behind other content */
+filter: blur(8px); /* Applies blur filter */
+opacity: 0.6; /* Sets transparency */
+}
+.quiz-container {
+    background: rgba(255, 255, 255, 0.4); /* semi-transparent white */
+    backdrop-filter: blur(8px);           /* glass blur effect */
+    -webkit-backdrop-filter: blur(8px);   /* Safari fix */
+    border-radius: 20px;                  /* smooth rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.5); /* soft border like your h2 */
+    padding: 30px;
+    margin: 50px auto;
+    max-width: 800px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1); /* subtle shadow to lift it */
+    font-family: 'Georgia', serif;
+}
+/* Comments Container */
+.comments-container {
+background-color: rgba(255, 255, 255, 0.85); /* Sets translucent background */
+padding: 20px; /* Sets padding */
+border-radius: 12px; /* Rounds corners */
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Applies shadow */
+margin-top: 30px; /* Sets top margin */
+font-family: 'Poppins', sans-serif; /* Sets font */
+}
+/* Title */
+.comments-container h3 {
+margin-bottom: 15px; /* Sets bottom margin */
+color: #333; /* Sets text color */
+font-size: 1.4rem; /* Sets font size */
+font-weight: 600; /* Sets font weight */
+}
+/* Individual comment bubble */
+.comment {
+background: #f9f9f9; /* Sets background color */
+padding: 12px 15px; /* Sets padding */
+border-radius: 10px; /* Rounds corners */
+margin-bottom: 12px; /* Sets bottom margin */
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Applies shadow */
+border-left: 4px solid #ffb86c; /* Adds left border */
+}
+/* Textarea styling */
+#comment-input {
+border: 1px solid #ccc; /* Sets border */
+border-radius: 8px; /* Rounds corners */
+font-family: inherit; /* Inherits font */
+font-size: 1rem; /* Sets font size */
+resize: none; /* Prevents manual resizing */
+}
+/* Comment button */
+#comment-form button {
+background-color: #ffb86c; /* Sets background color */
+border: none; /* Removes border */
+color: white; /* Sets text color */
+padding: 10px 18px; /* Sets padding */
+border-radius: 8px; /* Rounds corners */
+cursor: pointer; /* Changes cursor on hover */
+font-weight: 500; /* Sets font weight */
+transition: 0.2s; /* Smooths transitions */
+}
+#comment-form button:hover {
+background-color: #ff9f45; /* Changes background color on hover */
+}
+#comments-list {
+max-height: 300px; /* Adjust this value (e.g., 300px) to your desired height limit */
+overflow-y: auto; /* Adds the vertical scrollbar if content exceeds max-height */
+padding-right: 15px; /* Optional: Adds a little space to the right so text doesn't touch the scrollbar */
+}
+footer {
+/* LAYOUT & VISUAL STYLES */
+width: 100%; /* Ensures it spans the full width of the screen */
+background-color: #f2f2f2; /* Ensures it has a solid background and isn't transparent */
+clear: both; /* Ensures it drops below any floating elements */
+padding: 20px 0; /* Sets vertical padding */
+text-align: center; /* Centers text horizontally */
+border-top: 1px solid #ccc; /* Sets top border */
+font-size: 0.9rem; /* Sets font size */
+font-family: sans-serif; /* Sets font */
+font-weight: bold; /* Makes text thicker */
+}
