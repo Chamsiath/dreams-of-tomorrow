@@ -3,60 +3,62 @@
 <head>
 <link rel="stylesheet" type="text/css" href="style.css">
 <link rel="icon" href="doft.png" type="image/png">
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Dreams of Tomorrow</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dreams of Tomorrow</title>
 </head>
 
 <body>
-	<!--Navigation-->
-<header>
-<nav class="navbar">
-		<a href="index.html">Home📜</a>
-		<a href="stories.html">Read Stories📖</a>
-		<a href="abtproject.html">About Websiteℹ️</a>
-</nav>
-</header>
+  <div class="site-shell">
+    <header class="home-header">
+      <nav class="navbar">
+        <a href="index.html" class="active">Home</a>
+        <a href="stories.html">Read Stories</a>
+        <a href="abtproject.html">About Website</a>
+      </nav>
+    </header>
 
-	<!-- Hero Section -->
-<section class="hero">
-  <div class="overlay">
-    <h1>Dreams of Tomorrow</h1>
-    <h3><i>12 stories of hope, struggle, change, and joy</i></h3>
+    <main class="page-shell">
+      <section class="hero">
+        <div class="overlay">
+          <p class="eyebrow">A collection of voices, dreams, and journeys</p>
+          <h1>Dreams of Tomorrow</h1>
+          <h3>Stories of hope, struggle, change, and joy</h3>
+          <p class="intro-copy">Please get ready to be mesmerized.</p>
 
-     <h4><i>Please get ready to be mesmerized!</i>😊</h4>
+          <blockquote class="hero-quote">
+            <p>“Hold fast to dreams, for if dreams die life is a broken-winged bird that cannot fly.”</p>
+            <footer>— Langston Hughes</footer>
+          </blockquote>
 
+          <a href="stories.html" class="button">Proceed to Stories</a>
+        </div>
 
-<p><pre>“Hold fast to dreams, 
-For if dreams die 
-Life is a broken-winged bird, 
-That cannot fly.”</pre><br>
-    <b>― Langston Hughes</b></p>
+        <!-- Elegant Translate Widget -->
+        <div class="translate-wrapper hero-translate">
+          <span>🌐 Translate: </span>
+          <div id="google_translate_element"></div>
+        </div>
+      </section>
 
-<a href="stories.html" class="button">Proceed</a>
-</div>
-</section>
+      <script type="text/javascript">
+      function googleTranslateElementInit() {
+          new google.translate.TranslateElement({
+              pageLanguage: 'en',
+              includedLanguages: 'fr,en,es',
+              layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+          }, 'google_translate_element');
+      }
+      </script>
+      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    </main>
 
-<!-- Elegant Translate Widget -->
-<div class="translate-wrapper">
-    <span>🌐 Translate: </span>
-    <div id="google_translate_element"></div>
-</div>
-
-<script type="text/javascript">
-function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-        pageLanguage: 'en',                 // Site default language
-        includedLanguages: 'fr,en,es',      // Limit to French, English, Spanish
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-    }, 'google_translate_element');
-}
-</script>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-<!-- Footer Section -->
-<footer>
-  <div class="end">
-    Copyright © 2025 All rights reserved Chamsiath GNORA
+    <footer>
+      <div class="end">
+        Copyright © 2026 All rights reserved Chamsiath GNORA
+      </div>
+    </footer>
   </div>
-</footer>
+</body>
+</html>
